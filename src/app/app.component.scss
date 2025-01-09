@@ -1,25 +1,36 @@
 @import '../styles/variables.scss';
 
 .po-wrapper {
+  background-color: $background;
+  
+  ::ng-deep .po-toolbar {
     background-color: $background;
+    border-bottom: 1px solid $gray-primary;
+  }
     
-    ::ng-deep .po-toolbar {
-      background-color: $background;
-      color: white !important;
-      text-decoration: none;
-      border-bottom: 1px solid $gray-secondary;
+  ::ng-deep .po-menu {
+    background-color: $background;
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid $gray-primary;
+
+    .po-menu-item {
+      &:hover {
+        background: $primary-color;
+      }
+
+      &:focus {
+        color: $primary-color;
+      }
     }
-      
-      ::ng-deep .po-menu {
-        background-color: $background;
-        color: white;
-        border: none;
-        border-radius: 0;
-        border-right: 1px solid $gray-secondary;
-      }
-    
-    ::ng-deep .po-page {
-        background-color: $background;
-        color: $text-color;
-      }
+  }
+  
+  ::ng-deep .po-page {
+    background-color: $background;
+    color: $text-color;
+
+    h1 {
+      color: $primary-color;
+    }
+  }
 }
