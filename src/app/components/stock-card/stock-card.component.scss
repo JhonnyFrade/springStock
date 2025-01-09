@@ -1,0 +1,36 @@
+@import '../../../styles/variables.scss';
+
+
+::ng-deep .stocks-area {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+    ::ng-deep po-container {
+        background-color: $dark;
+        padding: 0;
+        color: $dark;
+        border-radius: .5rem;
+
+        ::ng-deep .po-container-content {
+            width: 300px;
+            background-color: $dark;
+            color: $gray-secondary;
+            border: 0;
+            border-radius: 1rem;
+
+            .title-area {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+
+            .footer {
+                display: flex;
+                flex-grow: 1;
+                justify-content: end;
+                color: $green;
+            }
+        }
+    }
+}
