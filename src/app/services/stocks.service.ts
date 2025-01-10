@@ -12,9 +12,8 @@ export class StocksService {
 
   getStocks(): Observable<StocksResponse> {
     const params = new HttpParams()
-      .set('limit', '10')
-      .set('sector', 'finance')
-      .set('token', 'aRYLqUMErnW8GHkqvk4YJg');
+      .set('token', 'aRYLqUMErnW8GHkqvk4YJg')
+      .set('type', 'stock')
   
     return this.http.get<StocksResponse>(this.apiUrl, { params });
   }
